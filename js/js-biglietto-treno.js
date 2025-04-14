@@ -38,7 +38,10 @@ ALTRIMENTI SE passeggero <= 0 anni
 
 let message;
 
-if (etàpasseggero <= 0) {
+
+if (numchilometri <= 0) {
+    message = `Si prega di inserire un dato valido`;
+} else if (etàpasseggero <= 0) {
     message = `Si prega di inserire un'età valida`;
 } else if (etàpasseggero < 18) {
     message = `Il prezzo del biglietto è ${(prezzodelbiglietto - sconto20).toFixed(2)}€`;
