@@ -13,16 +13,16 @@ Questo richiederà un minimo di ricerca.
 //  Prezzo del biglietto 0.21euro al km
 */
 const numchilometri = prompt("Quanti chilometri?")
-console.log(numchilometri);
+console.log(parseInt(numchilometri));
 
 const etàpasseggero = prompt("Quanti anni hai?");
-console.log(etàpasseggero);
+console.log(parseInt(etàpasseggero));
 
 const prezzodelbiglietto = 0.21 * parseInt(numchilometri);
 console.log(prezzodelbiglietto);
 
-const sconto20 = ((prezzodelbiglietto / 100) * 20).toFixed(2);
-const sconto40 = ((prezzodelbiglietto / 100) * 40).toFixed(2);
+const sconto20 = ((prezzodelbiglietto / 100) * 20);
+const sconto40 = ((prezzodelbiglietto / 100) * 40);
 
 // ESECUZIONE LOGICA
 
@@ -45,7 +45,7 @@ if (numchilometri <= 0) {
     message = `Si prega di inserire un'età valida`;
 } else if (etàpasseggero < 18) {
     message = `Il prezzo del biglietto è ${(prezzodelbiglietto - sconto20).toFixed(2)}€`;
-} else if (etàpasseggero > 65) {
+} else if (etàpasseggero >= 65) {
     message = `Il prezzo del biglietto è ${(prezzodelbiglietto - sconto40).toFixed(2)}€`;
 } else if (etàpasseggero >= 18) {
     message = `Il prezzo del biglietto è ${(prezzodelbiglietto).toFixed(2)}€`;
